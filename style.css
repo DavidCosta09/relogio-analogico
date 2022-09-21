@@ -1,0 +1,219 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+  transition: background 0.2s linear;
+}
+
+body.dark {
+  background: #232c35;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.mode-color-screen {
+  height: 100px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.checkbox {
+  opacity: 0;
+  /* position: absolute; */
+}
+
+.label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  position: relative;
+  height: 26px;
+  width: 50px;
+  transform: scale(1.5);
+}
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height: 22px;
+  width: 22px;
+  transform: translateX(0px);
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+  -webkit-transform: translateX(24px);
+  -moz-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  -o-transform: translateX(24px);
+}
+
+.fa-moon {
+  color: #f1c40f;
+}
+
+.fa-sun {
+  color: #f39c12;
+}
+
+.clock {
+  width: 400px;
+  height: 400px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+  border: 5px solid #000;
+  position: relative;
+}
+
+.clock .number {
+  --rotation: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 1.7rem;
+  transform: rotate(var(--rotation));
+}
+
+.number {
+  justify-content: space-between;
+}
+
+.clock .n1 {
+  --rotation: 30deg;
+}
+
+.clock .n2 {
+  --rotation: 60deg;
+}
+.clock .n3 {
+  --rotation: 90deg;
+}
+.clock .n4 {
+  --rotation: 120deg;
+}
+.clock .n5 {
+  --rotation: 150deg;
+}
+.clock .n6 {
+  --rotation: 180deg;
+}
+.clock .n7 {
+  --rotation: 210deg;
+}
+.clock .n8 {
+  --rotation: 240deg;
+}
+.clock .n9 {
+  --rotation: 270deg;
+}
+.clock .n10 {
+  --rotation: 300deg;
+}
+.clock .n11 {
+  --rotation: 330deg;
+}
+.clock .n12 {
+  --rotation: 360deg;
+}
+
+.clock .time {
+  --rotation: 0;
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  border: 1px solid white;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-origin: bottom;
+  z-index: 10;
+  transform: translateX(-50%) rotate(calc(var(--rotation) * 1deg));
+}
+
+.clock::after {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  z-index: 11;
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.clock .time.second {
+  width: 3px;
+  height: 40%;
+  background-color: red;
+}
+.clock .time.minute {
+  width: 8px;
+  height: 35%;
+  background-color: black;
+}
+.clock .time.hour {
+  width: 12px;
+  height: 30%;
+  background-color: black;
+}
+
+.point1 {
+  transform: rotate(-30deg);
+}
+.point2 {
+  transform: rotate(-60deg);
+}
+.point3 {
+  transform: rotate(-90deg);
+}
+.point4 {
+  transform: rotate(-120deg);
+}
+.point5 {
+  transform: rotate(-150deg);
+}
+.point6 {
+  transform: rotate(-180deg);
+}
+.point7 {
+  transform: rotate(-210deg);
+}
+.point8 {
+  transform: rotate(-240deg);
+}
+.point9 {
+  transform: rotate(-270deg);
+}
+.point10 {
+  transform: rotate(-300deg);
+}
+.point11 {
+  transform: rotate(-330deg);
+}
